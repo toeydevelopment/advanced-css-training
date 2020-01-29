@@ -29,12 +29,15 @@ body {
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  text-align: center; }
 
 .header__primary {
   text-align: center;
   color: white;
-  font-weight: 400; }
+  font-weight: 400;
+  backface-visibility: hidden;
+  margin-bottom: 60px; }
 
 .header__primary-main {
   display: block;
@@ -49,6 +52,51 @@ body {
   letter-spacing: 0.6rem;
   text-transform: uppercase;
   animation: moveInRight 2s; }
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  transition: all 0.3s;
+  border-radius: 100px;
+  position: relative; }
+
+.btn:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); }
+
+.btn:active {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); }
+
+.btn-white {
+  color: #777;
+  background: white; }
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.3s;
+  border-radius: 100px; }
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0; }
+
+.btn-white::after {
+  background-color: #fff; }
+
+.btn-animate {
+  animation: moveBtnIn 2s ease-out .75s;
+  animation-fill-mode: backwards; }
 
 @keyframes moveInLeft {
   0% {
@@ -69,3 +117,10 @@ body {
   100% {
     transform: translateX(0);
     opacity: 1; } }
+
+@keyframes moveBtnIn {
+  0% {
+    transform: translateY(10%);
+    opacity: 0; }
+  100% {
+    transform: translateY(0); } }
