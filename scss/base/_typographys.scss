@@ -36,3 +36,29 @@ body {
     animation: moveInRight 1s ease-out;
   }
 }
+
+.heading-secondary {
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: skewY(-5deg) scale(1.2);
+  }
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  color: $color-grey-dark;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 1.2rem;
+}
