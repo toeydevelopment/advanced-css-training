@@ -36,3 +36,34 @@ body {
     animation: moveInRight 1s ease-out;
   }
 }
+
+
+
+.heading-secondary {
+  font-size: 3.5rem;
+  font-weight: 400;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    rgba($color-primary, 1),
+    rgba($color-primary-light, 1)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.33s;
+
+  &:hover {
+    transform: skewY(-3deg);
+    text-shadow: 0.5rem 1rem 2rem rgba(black, 0.3);
+  }
+}
+
+.heading-tertiary {
+  font-size: 2rem;
+  color: $color-grey-dark;
+}
+
+.paragraph {
+  font-size: 1.5rem;
+}
