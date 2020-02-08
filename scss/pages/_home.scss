@@ -1,6 +1,29 @@
 .section-about {
-    background-color: $color-grey-light-1;
-    margin-top: -20rem;
-    padding: 20rem 5rem;
-    // text-align: center;
+  background-color: $color-grey-light-1;
+  margin-top: -20rem;
+  padding: 30rem 5rem;
+  // text-align: center;
+}
+
+.section-features {
+  margin-top: -12rem;
+  background-color: $color-grey-light-1;
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      120deg,
+      rgba($color-primary, 0.6),
+      rgba($color-primary-light, 0.6)
+    ),
+    url("../img/nat-4.jpg");
+  background-size: cover;
+  background-position: center;
+
+  transform: skewY(-10deg);
+
+  & > * {
+      transform: skewY(10deg);
+  }
+
+//   -webkit-clip-path: polygon(0 24%, 100% 0%, 100% 76%, 0% 100%);
+//   clip-path: polygon(0 24%, 100% 0%, 100% 76%, 0% 100%);
 }

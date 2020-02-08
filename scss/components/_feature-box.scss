@@ -1,0 +1,16 @@
+.feature-box {
+  padding: 1.5rem;
+  background-color: rgba($color-white, 0.8);
+  text-align: center;
+  border-radius: 3px;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: translateY(-1rem);
+  }
+
+  &__icon {
+      font-size: 6rem;
+      color: $color-primary;
+  }
+}
